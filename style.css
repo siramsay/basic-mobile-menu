@@ -1,0 +1,80 @@
+:root {
+}
+
+/* reset */
+* {
+  margin: 0;
+}
+
+html:not([lang]),
+html[lang=""] {
+  border-top: 20px solid red;
+}
+
+html:not([lang]),html[lang=""] { border-top: 20px solid red; }
+img:not([alt]),img[alt=""] { border: 5px dashed red; }
+canvas:not([role]),canvas:not([aria-label]),canvas[role=""],canvas[aria-label=""] { border: 5px dashed red; }
+
+/* Todo: move @import to html to benefit from cached fonts */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:900|Poppins:400');
+
+html {
+  font-size: 100%;
+  font-family: 'Ubuntu', sans-serif;
+} /*16px*/
+body {
+  margin: 0;
+  background-color: hsl(197, 58%, 8%);
+  position: relative;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+header {
+  height: 200px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: hsl(60, 89%, 52%);
+  font-size: 5em;
+  color: hsl(197, 58%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+footer{
+  height: 200px;
+  width: 100%;
+  background-color: hsl(60, 89%, 52%);
+  font-size: 5em;
+  color: hsl(197, 58%, 8%);
+  position: absolute;
+}
+
+h3 {
+  margin-bottom: 20px;
+  line-height: 1;
+}
+main {
+  position: relative;
+  top: 232px;
+  margin: 0 20px;
+  height: auto;
+}
+.inside-main {
+  background: hsla(0, 5%, 15%, 0.8);
+  min-height: 400px;
+  margin-bottom: 2em;
+}
+#one {
+  background-color: hsl(282, 100%, 75%);
+}
+#two {
+  background-color: hsl(210, 100%, 75%);
+}
+#three {
+  background-color: hsl(113, 100%, 70%);
+}
+#four {
+  background-color: hsl(260, 76%, 64%);
+}
