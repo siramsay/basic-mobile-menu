@@ -6,6 +6,21 @@
   margin: 0;
 }
 
+/* Make box-sing default to border-box */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 html:not([lang]),
 html[lang=""] {
   border-top: 20px solid red;
@@ -39,8 +54,8 @@ header {
   color: hsl(197, 58%, 8%);
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
+  padding: 2rem;
 }
 footer{
   height: 200px;
@@ -77,3 +92,37 @@ main {
 #four {
   background-color: hsl(260, 76%, 64%);
 }
+/* Mobile Menu */
+nav {
+  display: none;
+}
+
+menu li {
+  list-style: none;
+  padding: .5rem;
+  margin-bottom: 1px;
+}
+a:link {
+  color: black;
+  background-color: pink;
+  padding: .5rem;
+  text-decoration: none;
+}
+a:visited {
+  background-color: lemonchiffon;
+  color: orangered;
+}
+a:hover {
+  color: #ffffff;
+  background-color: salmon;
+}
+a:active {
+  background-color: #0fadff;
+}
+a:focus,
+button:focus {
+  /* Technically isn't needed if you don't want focus to show on click but if the framework you are using had disabled it you'll need to add it back.*/
+  outline: auto 2px Highlight;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
