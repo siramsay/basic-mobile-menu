@@ -95,8 +95,23 @@ main {
 /* Mobile Menu */
 nav {
   display: none;
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /* Style for flex */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
+nav.open {
+  display: flex;
+}
+menu {
+  padding-left: 0;
+}
 menu li {
   list-style: none;
   padding: .5rem;
