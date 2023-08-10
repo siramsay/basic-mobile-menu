@@ -92,6 +92,13 @@ main {
 #four {
   background-color: hsl(260, 76%, 64%);
 }
+
+/* Mobile menu button */
+.mobile-menu-toggle {
+  cursor: pointer;
+  z-index: 10;
+}
+
 /* Mobile Menu */
 nav {
   display: none;
