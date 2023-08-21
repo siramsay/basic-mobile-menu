@@ -67,7 +67,6 @@ footer{
   color: hsl(197, 58%, 8%);
   position: absolute;
 }
-
 h3 {
   line-height: 1;
 }
@@ -81,6 +80,10 @@ main {
   background: hsla(0, 5%, 15%, 0.8);
   min-height: 400px;
   margin-bottom: 2em;
+  padding: 1em;
+}
+.inside-main h2 {
+  margin-bottom: 2rem;
 }
 #one {
   background-color: hsl(282, 100%, 75%);
@@ -129,7 +132,7 @@ main.mobile-menu-active {
 nav {
   display: none;
   position: absolute;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.9);
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -158,14 +161,15 @@ a:link {
 }
 a:visited {
   background-color: lemonchiffon;
-  color: orangered;
+  color: #9700ff;
 }
 a:hover {
   color: #ffffff;
   background-color: salmon;
 }
 a:active {
-  background-color: #0fadff;
+  background-color: #8dd8ff;
+  color: #2142c1;
 }
 a:focus,
 button:focus {
