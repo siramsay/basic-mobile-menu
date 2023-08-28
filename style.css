@@ -99,20 +99,21 @@ main {
   z-index: 10;
   /*appearance: unset;
   -moz-appearance: none;
-  -webkit-appearance: none;/
+  -webkit-appearance: none;
   appearance: none;*/
   border: none;
   font-size: 1rem;
   /*padding: 0.5rem;*/
+  color: #0e0e0e;
 
-  /* with Background*/
+  /* with Background ::before*/
   padding: 0.5rem .2rem .5rem 1.7rem;
   position: relative;
   width: 100px;
   background: transparent;
 
 }
-.mobile-menu-toggle:before {
+.mobile-menu-toggle::before {
   /*content: '🍔';
   padding-right: 5px;*/
 
