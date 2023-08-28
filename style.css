@@ -97,7 +97,38 @@ main {
 .mobile-menu-toggle {
   cursor: pointer;
   z-index: 10;
+  /*appearance: unset;
+  -moz-appearance: none;
+  -webkit-appearance: none;/
+  appearance: none;*/
+  border: none;
+  font-size: 1rem;
+  /*padding: 0.5rem;*/
+
+  /* with Background*/
+  padding: 0.5rem .2rem .5rem 1.7rem;
+  position: relative;
+  width: 100px;
+  background: transparent;
+
 }
+.mobile-menu-toggle:before {
+  /*content: '🍔';
+  padding-right: 5px;*/
+
+  content: '';
+  width: 37px;
+  height: 31px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="37" height="31"><path fill="%23424B5A" fill-rule="nonzero" d="M0 2.583C0 1.154 1.181 0 2.643 0h31.714C35.82 0 37 1.154 37 2.583c0 1.43-1.181 2.584-2.643 2.584H2.643C1.18 5.167 0 4.012 0 2.583ZM0 15.5c0-1.429 1.181-2.583 2.643-2.583h31.714C35.82 12.917 37 14.07 37 15.5c0 1.429-1.181 2.583-2.643 2.583H2.643C1.18 18.083 0 16.93 0 15.5Zm37 12.917C37 29.846 35.819 31 34.357 31H2.643C1.18 31 0 29.846 0 28.417c0-1.43 1.181-2.584 2.643-2.584h31.714c1.462 0 2.643 1.155 2.643 2.584Z"/></svg>');
+  background-repeat: no-repeat;
+  /*background-position: calc(100vw - 94px) 40px;*/
+  background-size: 80%;
+}
+
+/*<svg xmlns="http://www.w3.org/2000/svg" width="37" height="31"><path fill="#424B5A" fill-rule="nonzero" d="M0 2.583C0 1.154 1.181 0 2.643 0h31.714C35.82 0 37 1.154 37 2.583c0 1.43-1.181 2.584-2.643 2.584H2.643C1.18 5.167 0 4.012 0 2.583ZM0 15.5c0-1.429 1.181-2.583 2.643-2.583h31.714C35.82 12.917 37 14.07 37 15.5c0 1.429-1.181 2.583-2.643 2.583H2.643C1.18 18.083 0 16.93 0 15.5Zm37 12.917C37 29.846 35.819 31 34.357 31H2.643C1.18 31 0 29.846 0 28.417c0-1.43 1.181-2.584 2.643-2.584h31.714c1.462 0 2.643 1.155 2.643 2.584Z"/></svg>*/
 
 /* Mobile Menu */
 nav {
