@@ -30,6 +30,8 @@ html:not([lang]),html[lang=""] { border-top: 20px solid red; }
 img:not([alt]),img[alt=""] { border: 5px dashed red; }
 canvas:not([role]),canvas:not([aria-label]),canvas[role=""],canvas[aria-label=""] { border: 5px dashed red; }
 
+
+
 /* Todo: move @import to html to benefit from cached fonts */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:900|Poppins:400');
 
@@ -65,7 +67,6 @@ footer{
   color: hsl(197, 58%, 8%);
   position: absolute;
 }
-
 h3 {
   line-height: 1;
 }
@@ -75,10 +76,31 @@ main {
   margin: 0 20px;
   height: auto;
 }
+/* This below rule is somewhat pointless and the solution a bit contorted as the browsers that don't support inert also don't support selector() function syntax.
+ * To make this work you'll need to check if inert is support and if so keep the element display as set.
+ *
+@supports not selector([inert]) {
+  #one {
+    background-color: hsl(0, 48%, 46%);
+  }
+}
+*/
+main[inert] {
+  display: none;
+}
+@supports selector([inert]) {
+  main[inert] {
+    display: revert;
+  }
+}
 .inside-main {
   background: hsla(0, 5%, 15%, 0.8);
   min-height: 400px;
   margin-bottom: 2em;
+  padding: 1em;
+}
+.inside-main h2 {
+  margin-bottom: 2rem;
 }
 #one {
   background-color: hsl(282, 100%, 75%);
@@ -94,13 +116,10 @@ main {
 }
 
 /* Mobile menu button */
+
 .mobile-menu-toggle {
   cursor: pointer;
   z-index: 10;
-  /*appearance: unset;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;*/
   border: none;
   font-size: 1rem;
   /*padding: 0.5rem;*/
@@ -135,7 +154,7 @@ main {
 nav {
   display: none;
   position: absolute;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.9);
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -164,14 +183,15 @@ a:link {
 }
 a:visited {
   background-color: lemonchiffon;
-  color: orangered;
+  color: #9700ff;
 }
 a:hover {
   color: #ffffff;
   background-color: salmon;
 }
 a:active {
-  background-color: #0fadff;
+  background-color: #8dd8ff;
+  color: #2142c1;
 }
 a:focus,
 button:focus {
