@@ -76,6 +76,23 @@ main {
   margin: 0 20px;
   height: auto;
 }
+/* This below rule is somewhat pointless and the solution a bit contorted as the browsers that don't support inert also don't support selector() function syntax.
+ * To make this work you'll need to check if inert is support and if so keep the element display as set.
+ *
+@supports not selector([inert]) {
+  #one {
+    background-color: hsl(0, 48%, 46%);
+  }
+}
+*/
+main[inert] {
+  display: none;
+}
+@supports selector([inert]) {
+  main[inert] {
+    display: revert;
+  }
+}
 .inside-main {
   background: hsla(0, 5%, 15%, 0.8);
   min-height: 400px;
@@ -88,30 +105,6 @@ main {
 #one {
   background-color: hsl(282, 100%, 75%);
 }
-
-/* This below rule is somewhat pointless and the solution a bit contorted as the browsers that don't support inert also don't support selector() function syntax.
- * To make this work you'll need to check if inert is support and if so keep the element display as set.
- */
-@supports not selector([inert]) {
-  #one {
-    background-color: hsl(0, 48%, 46%);
-  }
-}
-.mobile-active #one {
-  background-color: hsl(219, 48%, 46%);
-}
-main.mobile-menu-active {
-  display: none;
-}
-@supports selector([inert]) {
-  main.mobile-menu-active {
-    display: revert;
-  }
-  main.mobile-menu-active #one {
-    background-color: hsl(219, 48%, 46%);
-  }
-}
-
 #two {
   background-color: hsl(210, 100%, 75%);
 }
@@ -123,13 +116,10 @@ main.mobile-menu-active {
 }
 
 /* Mobile menu button */
+
 .mobile-menu-toggle {
   cursor: pointer;
   z-index: 10;
-  /*appearance: unset;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;*/
   border: none;
   font-size: 1rem;
   /*padding: 0.5rem;*/
