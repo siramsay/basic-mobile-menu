@@ -155,7 +155,7 @@ main[inert] {
 
 /* Mobile Menu */
 nav {
-  display: none;
+  display: flex;
   position: absolute;
   background: rgba(255,255,255,0.9);
   width: 100vw;
@@ -166,12 +166,18 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: opacity 300ms 100ms ease-in-out;
+  opacity: 0;
 }
 nav.open {
-  display: flex;
+  opacity: 1;
 }
 menu {
   padding-left: 0;
+  display: none;
+}
+.open menu {
+  display: block;
 }
 menu li {
   list-style: none;
