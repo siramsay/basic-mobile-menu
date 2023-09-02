@@ -163,15 +163,18 @@ nav {
   top: 0;
   left: 0;
   /* Style for flex */
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
 }
 nav.open {
   display: flex;
+  overflow: scroll;
+  padding-top: 200px;
 }
 menu {
   padding-left: 0;
+  margin-bottom: 100px;
 }
 menu li {
   list-style: none;
