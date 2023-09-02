@@ -46,6 +46,9 @@ body {
   color: #ffffff;
   overflow-x: hidden;
 }
+body.mobile-menu-active {
+  overflow: hidden;
+}
 header {
   height: 200px;
   position: fixed;
