@@ -31,10 +31,10 @@ function isScrollbarGutterEnabled() {
 function toggleScrollbarGutter() {
   if (isScrollbarGutterEnabled()) {
     htmlElement.classList.remove('scrollbar-gutter-stable');
-    scrollbarToggle.textContent = 'Enable Scrollbar';
+    scrollbarToggle.textContent = 'Enable Scrollbar Gutter Stable';
   } else {
     htmlElement.classList.add('scrollbar-gutter-stable');
-    scrollbarToggle.textContent = 'Disable Scrollbar';
+    scrollbarToggle.textContent = 'Disable Scrollbar Gutter Stable';
   }
 }
 
@@ -44,9 +44,9 @@ scrollbarToggle.addEventListener('click', toggleScrollbarGutter);
 // Initialize the button text based on current state
 window.addEventListener('load', function() {
   if (isScrollbarGutterEnabled()) {
-    scrollbarToggle.textContent = 'Disable Scrollbar';
+    scrollbarToggle.textContent = 'Disable Scrollbar Gutter Stable';
   } else {
-    scrollbarToggle.textContent = 'Enable Scrollbar';
+    scrollbarToggle.textContent = 'Enable Scrollbar Gutter Stable';
   }
 });
 
