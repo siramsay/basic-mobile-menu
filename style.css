@@ -11,7 +11,24 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /*scrollbar-gutter: stable;*/
+}
+
+/* Add the scrollbar-gutter-stable class to enable the property */
+html.scrollbar-gutter-stable {
   scrollbar-gutter: stable;
+}
+
+#scrollbarToggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  cursor: pointer;
+  z-index: 1000;
+  width: 150px;
 }
 
 *,
