@@ -18,8 +18,6 @@ menuToggle.addEventListener('click', function () {
   }
 })
 
-
-
 // Get the HTML element and toggle button
 const htmlElement = document.documentElement;
 const scrollbarToggle = document.getElementById('scrollbarToggle');
@@ -29,13 +27,8 @@ function isScrollbarGutterEnabled() {
   return htmlElement.classList.contains('scrollbar-gutter-stable');
 }
 
-console.log(htmlElement);
-console.log(scrollbarToggle);
-
-
 // Toggle the scrollbar-gutter class
 function toggleScrollbarGutter() {
-  console.log('toggle');
   if (isScrollbarGutterEnabled()) {
     htmlElement.classList.remove('scrollbar-gutter-stable');
     scrollbarToggle.textContent = 'Enable Scrollbar';
